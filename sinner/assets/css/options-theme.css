@@ -1,0 +1,46 @@
+.row [id*="typecho-option-item-"],#tab-f{padding: 0;}#tab-f a{cursor:pointer;}ul,li{list-style:none;margin:5px 0;padding:0;}label.typecho-label{display:block;}textarea{width:100%;height:100px;}label.typecho-label{color:#4099f3;font-weight:bold;}p.description{margin:0 !important;color:#b94a48 !important;}.setc,.helpme{display:none}.btn.primary{color:#667c99;background:#596dff;width:100%;outline:none;}.btn.primary:hover,.btn.primary:focus,.btn.primary:active{color:#667c99;background-color:#c7d2e1;border-color:#415b76;}code{color:red;}.col-mb-12.col-tb-8.col-tb-offset-2{margin-left:0;width:100%;}.btnx{display:inline-block;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;padding:5px 10px;font-size:.875rem;line-height:1.5;border-radius:.15rem;-webkit-transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;}.tongzhi {text-align: center;background: white;color: red;padding: 5px 0;margin: 5px 0;font-weight: bold;font-size: 18px;}.protected{margin-top: 15px;}.typecho-option {margin: .5em 0;}
+.zesc, .home li, .setc li, .helpme li {
+    background: rgba(171,203,251,0.32);
+    padding: 10px;
+    margin-top: 10px;
+}
+.zesc input {
+    background: #FAFBFD;
+    border: 1px solid #d4d4d4;
+    width: 100%;
+}
+.protected .btn,.btn.primary {    margin: 3px 0;
+    background-color: #596dff !important;border: 0;
+    color: #fff;
+}
+.btn.primary:hover, .btn.primary:focus, .btn.primary:active {
+    color: #ffffff;
+    background-color: #322ff9 !important;
+}
+.zesc input[type="file"] {
+    color: gray;
+}
+/* 主按钮的样式自定义 */
+::file-selector-button {
+    height: 2rem;
+    color: #fff;
+    border-radius: .25rem;
+    border: 1px solid #2a80eb;
+    padding: 6px 10px;
+    background-color: #2a80eb;
+    box-sizing: border-box;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+.shouquan {
+    background: #E91E63;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.shouquan a {
+    color: white;
+    font-size: 16px;
+}

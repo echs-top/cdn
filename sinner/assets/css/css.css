@@ -1,0 +1,15 @@
+.ze-dialog  .content-tabs{margin-bottom:10px}.ze-dialog  .content-tabs .content-tabs-head{cursor:pointer;white-space:nowrap;overflow-y:hidden;overflow-x:hidden;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}body.mobile .ze-dialog  .content-tabs .content-tabs-head,body.macOS .ze-dialog  .content-tabs .content-tabs-head{overflow-x:auto}.ze-dialog  .content-tabs .content-tabs-head::-webkit-scrollbar{display:none}.ze-dialog  .content-tabs .content-tabs-head .content-tab-title{display:inline-block;border:0.0625rem solid #ddd;border-left-width:0;padding:0 1.25rem;font-size:.875rem;font-weight:500;line-height:2.375rem;color:#888;background-color:#eee;-webkit-transition:0.3s ease all;-moz-transition:0.3s ease all;-ms-transition:0.3s ease all;-o-transition:0.3s ease all;transition:0.3s ease all}.ze-dialog  .content-tabs .content-tabs-head .content-tab-title:first-child{border-top-left-radius:.25rem;border-left-width:.0625rem}.ze-dialog  .content-tabs .content-tabs-head .content-tab-title:last-child{border-top-right-radius:.25rem}.ze-dialog  .content-tabs .content-tabs-head .content-tab-title.selected{color:#333;border-bottom-color:#F6F6F3;background-color:#F6F6F3}.ze-dialog  .content-tabs .content-tabs-head .content-tab-title:hover{color:#333;background-color:#F6F6F3}#mirages-dialog .content-tabs .content-tabs-body{border:.0625rem solid #ddd;margin-top:-0.0625rem;border-radius:0 .25rem .25rem .25rem;padding:.75rem}body.theme-dark .ze-dialog  .content-tabs .content-tabs-body{border-color:#403E3E}body.theme-sunset .ze-dialog  .content-tabs .content-tabs-body{border-color:#d6d0c2}.ze-dialog  .content-tabs .content-tabs-body .content-tab-content{display:none}.ze-dialog  .content-tabs .content-tabs-body .content-tab-content.selected{-webkit-touch-callout:auto;-webkit-user-select:auto;-moz-user-select:auto;-ms-user-select:auto;user-select:auto;display:block}.ze-dialog  .content-tabs .content-tabs-body .content-tab-content>*:last-child,.ze-dialog  .content-tabs .content-tabs-body .content-tab-content>.table-responsive:last-child table{margin-bottom:0}
+.ze-dialog textarea{width:100%;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}
+.ze-dialog #btn-tab-add {
+    margin-bottom: 10px;
+}
+.icon{width: 16px;
+    height: 16px;
+    line-height: 16px;
+    color: #999;}
+.ze-dialog input {
+    display: block !important;
+}
+.wmd-button-row {
+    height: auto;
+}
