@@ -1,4 +1,4 @@
-# 此仓库用来给主题创建静态文件加速
+# 静态文件加速仓库
 
 <p align="center">
 <img src="https://api.echs.top" width="100%">
