@@ -1,5 +1,5 @@
 # 静态文件加速仓库
 
 <p align="center">
-<img src="https://api.echs.top" width="100%">
+<img src="https://api.echs.top">
 </p>
