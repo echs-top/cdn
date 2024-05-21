@@ -1,0 +1,387 @@
+body {
+    background-color: #fff;
+}
+.cuteen * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cuteen li {
+    list-style: none;
+}
+
+.col-mb-12.col-tb-8.col-tb-offset-2 {
+    margin-left: 0;
+    width: 100%;
+}
+
+.cuteen .notice {
+    background-color: #fff;
+    display: block;
+    margin-left: 15px;
+    padding: 15px;
+    flex: 1;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 4px;
+    line-height: 28px;
+    color: #606266;
+}
+
+.cuteen > form {
+    position: relative;
+    background: #fff;
+    min-width: 0;
+    flex: 1;
+    margin-left: 15px;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 4px;
+}
+
+.cuteen > form .ctx {
+    display: none;
+    padding: 15px;
+}
+
+.flex {
+    display: flex;
+}
+
+.aside {
+    position: sticky;
+    top: 15px;
+    width: 200px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.aside .tabs .item {
+    font-size: 1rem;
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-color: transparent;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #606266;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.35s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.aside .tabs .item:hover, .aside .tabs .item.active {
+    border-color: rgb(219, 39, 119);
+    color: rgb(219, 39, 119);
+    background-color: rgb(253, 242, 248);
+}
+
+.logo {
+    color: #808080;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ebeef5;
+}
+
+.h-6.w-6 {
+    display: inline-block;
+    vertical-align: sub;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.cuteen > form .typecho-option {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 15px;
+    background: #fff;
+    border-top: 1px solid #ebebeb;
+    border-radius: 0 0 8px 8px;
+}
+
+.cuteen > form .typecho-option button {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    margin-top: 1rem;
+    width:30% !important;
+}
+
+.cuteen .typecho-option-submit li {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cuteen > form .typecho-option button, .logo .backup input {
+    width: 170px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    line-height: 40px;
+    margin-bottom: 1rem;
+}
+
+.logo .backup {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.logo .backup input:nth-child(2) {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.logo .backup input:nth-child(3) {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+.logo .backup input:nth-child(4) {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.logo .backup input:nth-child(1) {
+    background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.cuteen > form .typecho-option button:hover, .logo .backup input:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.cuteen > form .ctx li textarea {
+    height: 125px;
+}
+
+.cuteen > form .ctx li .description {
+    background: #f8f8f8;
+    color: #999;
+    padding: 10px 15px;
+    margin-top: 15px;
+    line-height: 20px;
+    border-radius: 4px;
+    word-break: break-all;
+    font-size: 12px;
+}
+
+.cuteen > form .ctx li textarea, .cuteen > form .ctx li input[type='text'] {
+    width: 100%;
+    padding: 10px;
+    color: #666;
+    border: 1px solid #e9e9eb;
+    -webkit-appearance: none;
+}
+
+.cuteen > form .ctx li textarea:focus, .cuteen > form .ctx li input[type='text']:focus {
+    border-color: rgb(63, 131, 248);
+    border-radius: 4px;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 1px rgb(63, 131, 248), 0 0 #000;
+}
+
+.cuteen > form .ctx li .typecho-label {
+    font-weight: bold;
+    display: block;
+    border-left: 4px solid rgb(79, 70, 229);
+    background-color: rgb(238, 242, 255);
+    line-height: 26px;
+    margin-bottom: 15px;
+    padding: 5px 15px;
+    color: rgb(79, 70, 229);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.cuteen .multiline input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.multiline input[type="radio"] + label:before {
+    content: '';
+    background: #f4f4f4;
+    border-radius: 100%;
+    border: 1px solid #b4b4b4;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    position: relative;
+    top: -0.2em;
+    margin-right: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+.multiline input[type="radio"]:checked + label:before {
+    background-color: #3197EE;
+    box-shadow: inset 0 0 0 4px #f4f4f4;
+}
+
+.multiline input[type="radio"]:focus + label:before {
+    outline: none;
+    border-color: #3197EE;
+}
+
+.multiline input[type="radio"]:disabled + label:before {
+    box-shadow: inset 0 0 0 4px #f4f4f4;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
+}
+
+.multiline input[type="radio"] + label:empty:before {
+    margin-right: 0;
+}
+
+.multiline {
+    position: relative;
+    display: inline-block;
+    backface-visibility: hidden;
+    outline: 0;
+    vertical-align: baseline;
+    font-style: normal;
+    min-height: 17px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    min-width: 17px;
+}
+
+
+.multiline input[type="checkbox"] {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
+    outline: 0;
+    z-index: 3;
+    width: 17px;
+    height: 17px;
+    zoom: 1.25;
+    vertical-align: text-bottom;
+}
+
+.multiline input[type="checkbox"] + label {
+    min-height: 1.5rem;
+    padding-left: 4.5rem;
+    vertical-align: middle;
+    color: #000;
+    font-size: 13px;
+    user-select: none;
+}
+
+.multiline input[type="checkbox"] + label:before {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    content: '';
+    z-index: 1;
+    transform: none;
+    border: none;
+    top: 0;
+    background: #ccc;
+    height: 28px;
+    width: 52px;
+    border-radius: 999px;
+}
+
+.multiline input[type="checkbox"] + label:after {
+    content: '';
+    z-index: 3;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background-color: #fff;
+    -webkit-transition: -webkit-transform .1825s ease-in-out;
+    transition: -webkit-transform .1825s ease-in-out;
+    transition: transform .1825s ease-in-out;
+}
+
+
+.multiline input[type="checkbox"]:checked + label:before {
+    background-color: #00d1b2;
+}
+
+.multiline input[type="checkbox"]:checked + label::after {
+    transform: translatex(24px);
+}
+
+input[type=checkbox] {
+    zoom: 1.25;
+    vertical-align: text-bottom;
+    margin-right: 2px;
+}
+
+.ctx span {
+    margin-right: 15px;
+}
+
+@media (max-width: 451px) {
+    .aside .tabs .item:hover, .aside .tabs .item.active {
+        border: unset;
+    }
+
+    .aside .tabs .item {
+        border-left-style: unset;
+        border-left-width: unset;
+        border-color: unset;
+        height: unset;
+        line-height: unset;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .logo .backup input {
+        width: 130px;
+    }
+
+    .cuteen {
+        display: block;
+    }
+
+    .cuteen > form {
+        margin-left: 0;
+    }
+
+    .aside {
+        width: 100%;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
