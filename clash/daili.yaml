@@ -1,2 +1,5 @@
 payload:
-    - google.com
+    - +.googleusercontent.com
+    - +.gstatic.com
+    - +.googleapis.com
+    - +.googieapis.cn
