@@ -1,6 +1,3 @@
 payload:
-    - +.googleusercontent.com
-    - +.gstatic.com
     - +.googleapis.com
     - +.googieapis.cn
-    - services.googleapis.cn
