@@ -1,3 +1,4 @@
+# cn_domain补充规则
 payload:
     - +.echs.top
     - +.sharepoint.cn
