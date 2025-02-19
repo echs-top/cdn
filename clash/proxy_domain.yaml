@@ -1,6 +1,0 @@
-# 代理规则补充
-payload:
-  - +.googleapis.com
-  - +.googieapis.cn
-  - +.xn–ngstr-lra8j.com
-  - +.xn–ngstr-cn-8za9o.com
