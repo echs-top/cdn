@@ -84,11 +84,11 @@ jobs:
             # 清理旧的 build 文件夹
             rm -rf build
             
-            # 移动构建结果到当前仓库的根目录
+            # 移动构建结果到当前仓库的根目录 (移动后文件夹名称已经是 build)
             mv ../$SOURCE_DIR ./
             
-            # 确保文件夹名是 build
-            mv build build
+            # 【重要修正】删除错误的 mv build build 命令。
+            
           else
             echo "错误：未找到构建目录 $SOURCE_DIR，make ui 可能失败。"
             exit 1
