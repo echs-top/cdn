@@ -1,11 +1,8 @@
 name: 构建并上传Answer UI
 
-# 触发器：可以手动从 GitHub Actions 界面触发，或者在推送到 main 分支时触发
+# 触发器：只保留手动触发 (workflow_dispatch)，需要时在 GitHub Actions 界面点击 Run workflow
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main # 根据您的需要修改触发分支 (例如改为 master 或其他)
 
 jobs:
   build_and_deploy_answer_ui:
@@ -61,13 +58,15 @@ jobs:
       - name: 7. 安装 Go 依赖工具 (mockgen v1.6.0, wire v0.5.0)
         run: |
           echo "Installing mockgen..."
+          # 安装 mockgen (v1.6.0)
           go install github.com/golang/mock/mockgen@v1.6.0
           echo "Installing wire..."
+          # 安装 wire (v0.5.0)
           go install github.com/google/wire/cmd/wire@v0.5.0
 
       # --- 构建 Answer UI 开始 ---
 
-      - name: 8. 制作 UI 构建
+      - name: 8. 制作 UI 构建 (make ui)
         working-directory: answer_source # 切换到 Answer 源码目录执行 make
         # make ui 会自动处理 pnpm install 和 build 步骤
         run: make ui 
@@ -85,7 +84,7 @@ jobs:
             # 清理旧的 build 文件夹
             rm -rf build
             
-            # 移动构建结果到当前仓库的根目录，并命名为 build
+            # 移动构建结果到当前仓库的根目录
             mv ../$SOURCE_DIR ./
             
             # 确保文件夹名是 build
@@ -103,7 +102,7 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           
-          # 添加 build 文件夹
+          # 暂存 build 文件夹
           git add build
           
           # 检查是否有更改需要提交
