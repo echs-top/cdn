@@ -64,16 +64,29 @@ jobs:
           # 安装 wire (v0.5.0)
           go install github.com/google/wire/cmd/wire@v0.5.0
 
+      - name: 8. 修改 .env.production 中的 PUBLIC_URL (新增加的步骤)
+        working-directory: answer_source/ui
+        run: |
+          ENV_FILE=".env.production"
+          
+          echo "正在修改 $ENV_FILE 中的 PUBLIC_URL..."
+          # 使用 sed 命令将 PUBLIC_URL=/ 替换为 PUBLIC_URL=https://cdn.echs.top/build
+          sed -i 's|PUBLIC_URL=/|PUBLIC_URL=https://cdn.echs.top/build|g' $ENV_FILE
+          
+          echo "--- 确认修改后的 PUBLIC_URL ---"
+          grep "PUBLIC_URL" $ENV_FILE
+          echo "--------------------------------"
+          
       # --- 构建 Answer UI 开始 ---
 
-      - name: 8. 制作 UI 构建 (make ui)
+      - name: 9. 制作 UI 构建 (make ui)
         working-directory: answer_source # 切换到 Answer 源码目录执行 make
-        # make ui 会自动处理 pnpm install 和 build 步骤
+        # make ui 将使用第 8 步修改后的 PUBLIC_URL 进行构建
         run: make ui 
 
       # --- 上传结果到当前仓库根目录 ---
       
-      - name: 9. 移动构建文件到当前仓库的根目录
+      - name: 10. 移动构建文件到当前仓库的根目录
         run: |
           SOURCE_DIR=answer_source/ui/build
 
@@ -84,17 +97,15 @@ jobs:
             # 清理旧的 build 文件夹
             rm -rf build
             
-            # 移动构建结果到当前仓库的根目录 (移动后文件夹名称已经是 build)
+            # 移动构建结果到当前仓库的根目录 (文件夹名称保持为 build)
             mv ../$SOURCE_DIR ./
-            
-            # 【重要修正】删除错误的 mv build build 命令。
             
           else
             echo "错误：未找到构建目录 $SOURCE_DIR，make ui 可能失败。"
             exit 1
           fi
 
-      - name: 10. 提交并推送构建文件夹
+      - name: 11. 提交并推送构建文件夹
         run: |
           cd current_repo
           
