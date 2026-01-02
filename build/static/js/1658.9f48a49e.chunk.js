@@ -1,2 +1,0 @@
-"use strict";(globalThis.webpackChunkanswer_static=globalThis.webpackChunkanswer_static||[]).push([[1658],{11658:(t,s,e)=>{e.r(s),e.d(s,{default:()=>c});var r=e(85940),a=e(10428),o=e(49450);const c=()=>{const[t]=(0,r.ok)(),s=t.get("msg")||"",e=t.get("title")||"";return(0,o.jsx)(a.IO,{httpCode:"50X",title:e,errMsg:s,showErrorCode:!s})}}}]);
-//# sourceMappingURL=1658.9f48a49e.chunk.js.map

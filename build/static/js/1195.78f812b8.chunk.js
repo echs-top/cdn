@@ -1,2 +1,0 @@
-"use strict";(globalThis.webpackChunkanswer_static=globalThis.webpackChunkanswer_static||[]).push([[1195],{41195:(s,a,t)=>{t.r(a),t.d(a,{default:()=>h});var e=t(10428),c=t(49450);const h=()=>(0,c.jsx)(e.IO,{httpCode:"404"})}}]);
-//# sourceMappingURL=1195.78f812b8.chunk.js.map

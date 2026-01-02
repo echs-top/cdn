@@ -1,2 +1,0 @@
-"use strict";(globalThis.webpackChunkanswer_static=globalThis.webpackChunkanswer_static||[]).push([[4349],{6730:(e,s,t)=>{t.r(s),t.d(s,{default:()=>r});var a=t(12162),c=t(28446),i=t(49450);const n=()=>(0,i.jsx)("div",{className:"mt-5 text-center",children:(0,i.jsxs)(c.x,{i18nKey:"search.empty",children:["We couldn't find anything.",(0,i.jsx)("br",{}),"Try different or less specific keywords."]})}),r=(0,a.memo)(n)}}]);
-//# sourceMappingURL=4349.8d5f429f.chunk.js.map
