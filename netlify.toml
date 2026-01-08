@@ -1,0 +1,15 @@
+# 针对 Service Worker 的特殊处理 (sw.js)
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# 针对所有其他资源的全局处理 (类似 (.*))
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, s-maxage=2592000, max-age=2592000"
+    # 注意：Netlify 没有直接对应 Vercel-CDN-Cache-Control 的自定义头，
+    # 但 Netlify Edge 会优先遵循 Cache-Control 指令。
+    # 如果你想保留这个自定义头，可以照样写：
+    Vercel-CDN-Cache-Control = "max-age=86400"
