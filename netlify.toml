@@ -1,15 +1,23 @@
-# 针对 Service Worker 的特殊处理 (sw.js)
-[[headers]]
-  for = "/sw.js"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-# 针对所有其他资源的全局处理 (类似 (.*))
+# 1. 针对所有资源的全局处理（跨域 + 强缓存）
 [[headers]]
   for = "/*"
   [headers.values]
+    # 跨域设置：让它像 Vercel 一样支持外部调用
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "*"
+    
+    # 缓存设置：30天强缓存 (2592000秒)
     Cache-Control = "public, s-maxage=2592000, max-age=2592000"
-    # 注意：Netlify 没有直接对应 Vercel-CDN-Cache-Control 的自定义头，
-    # 但 Netlify Edge 会优先遵循 Cache-Control 指令。
-    # 如果你想保留这个自定义头，可以照样写：
+    
+    # 保留你习惯的自定义头（虽然 Netlify 默认不识别它，但会正常输出）
     Vercel-CDN-Cache-Control = "max-age=86400"
+
+# 2. 针对 Service Worker 的特殊处理 (不缓存，确保立即更新)
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    # 覆盖全局缓存策略，确保 Service Worker 始终检查更新
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Service-Worker-Allowed = "/"
