@@ -3,7 +3,7 @@ name = "cdn"
 # 入口文件路径
 main = "worker.js"
 # 日期
-compatibility_date = "2026-05-17"
+compatibility_date = "2026-05-16"
 
 # 配置静态资源目录
 [assets]
