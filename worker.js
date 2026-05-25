@@ -1,38 +1,30 @@
 export default {
   async fetch(request, env, ctx) {
-    // 跨域
-    const corsHeaders = {
+    // 统一配置跨域与允许 iframe 嵌入的头部
+    const injectHeaders = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "*",
       "Access-Control-Allow-Headers": "*",
+      "Content-Security-Policy": "frame-ancestors *",
     };
 
-    // OPTIONS预检请求
+    // 处理 OPTIONS 预检请求
     if (request.method === "OPTIONS") {
-      return new Response(null, { headers: corsHeaders });
+      return new Response(null, { headers: injectHeaders });
     }
 
     try {
-      // 2. 从全局绑定的静态资源中获取文件
-      const response = await env.ASSETS.fetch(request);
+      // 1. 尝试从全局绑定的静态资源中获取文件
+      let response = await env.ASSETS.fetch(request);
 
-      // 文件不存在返回404
-      if (response.status === 404) {
-        return new Response("File not found", { status: 404 });
-      }
-
-      // 重写Response
+      // 2. 包装原始响应，注入我们自定义的 Headers
       const newResponse = new Response(response.body, response);
-      
-      // 设置跨域头
-      Object.keys(corsHeaders).forEach(key => {
-        newResponse.headers.set(key, corsHeaders[key]);
+      Object.keys(injectHeaders).forEach(key => {
+        newResponse.headers.set(key, injectHeaders[key]);
       });
 
       return newResponse;
-
     } catch (e) {
-      // 错误处理
       return new Response("Internal Server Error", { status: 500 });
     }
   }
