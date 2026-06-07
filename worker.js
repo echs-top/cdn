@@ -1,18 +1,5 @@
 export default {
   async fetch(request, env, ctx) {
-    // 跨域
-    const corsHeaders = {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "*",
-      "Access-Control-Allow-Headers": "*",
-      "Content-Security-Policy": "frame-ancestors *",
-    };
-
-    // 预检
-    if (request.method === "OPTIONS") {
-      return new Response(null, { headers: corsHeaders });
-    }
-
     const url = new URL(request.url);
 
     try {
@@ -26,11 +13,6 @@ export default {
 
       // 重写Response
       const newResponse = new Response(response.body, response);
-      
-      // 设置跨域头
-      Object.keys(corsHeaders).forEach(key => {
-        newResponse.headers.set(key, corsHeaders[key]);
-      });
 
       return newResponse;
 
